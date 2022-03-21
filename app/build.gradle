@@ -57,4 +57,8 @@ dependencies {
 
     // Material Design
     implementation 'com.google.android.material:material:1.4.0'
+
+    // Test
+    testImplementation 'junit:junit:4.+'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
 }
