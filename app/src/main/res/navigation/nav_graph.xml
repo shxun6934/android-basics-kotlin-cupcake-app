@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,6 +36,11 @@
         <action
             android:id="@+id/flavor_fragment_to_pickup_fragment"
             app:destination="@id/pickupFragment" />
+        <action
+            android:id="@+id/flavor_fragment_back_to_start_fragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/pickupFragment"
@@ -44,10 +50,21 @@
         <action
             android:id="@+id/pickup_fragment_to_summary_fragment"
             app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/pickup_fragment_back_to_start_fragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.cupcake.SummaryFragment"
         android:label="@string/order_summary"
-        tools:layout="@layout/fragment_summary" />
+        tools:layout="@layout/fragment_summary">
+        <action
+            android:id="@+id/summary_fragment_back_to_start_fragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
